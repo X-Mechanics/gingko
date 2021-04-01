@@ -95,7 +95,7 @@ class Gingko:
         """Make hierarhical pointers for slicing"""
         _ptrs, _ptrset = list(), set()
         for x in self.indices[:-1]:
-            _ptrset.update(np.diff(x,prepend=[-1],append=[-1]).nonzero()[0])
+            _ptrset.update(np.diff(x,prepend=[-999],append=[-999]).nonzero()[0])
             _ptrs.append(np.array(sorted(list(_ptrset))))
 
         ptrs = [_ptrs[-1]]

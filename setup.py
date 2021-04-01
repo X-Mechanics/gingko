@@ -12,6 +12,6 @@ if os.path.isfile(requirementPath):
 setup(
     name='gingko', 
     install_requires=install_requires,
-    version='0.1',
+    version='0.1.1',
     packages=find_packages()
 )
